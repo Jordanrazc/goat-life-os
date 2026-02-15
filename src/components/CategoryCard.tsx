@@ -1,7 +1,12 @@
 import { cn } from '@/lib/utils';
 import { Category } from '@/types';
 import LevelBadge from './LevelBadge';
-import { Brain, Dumbbell, Rocket, Video, Target, Sparkles, Heart, Zap, Sun } from 'lucide-react';
+import { Brain, Dumbbell, Rocket, Video, Target, Sparkles, Heart, Zap, Sun, BookOpen, Music, Palette, Globe, Shield, Coffee, Star, Flame, Crown, Gem, Eye, Compass } from 'lucide-react';
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Brain, Dumbbell, Rocket, Video, Target, Sparkles, Heart, Zap, Sun,
+  BookOpen, Music, Palette, Globe, Shield, Coffee, Star, Flame, Crown, Gem, Eye, Compass,
+};
 
 interface CategoryCardProps {
   category: Category;
@@ -9,18 +14,6 @@ interface CategoryCardProps {
   totalToday?: number;
   onClick?: () => void;
 }
-
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Brain,
-  Dumbbell,
-  Rocket,
-  Video,
-  Target,
-  Sparkles,
-  Heart,
-  Zap,
-  Sun,
-};
 
 const CategoryCard = ({ category, completedToday = 0, totalToday = 0, onClick }: CategoryCardProps) => {
   const Icon = iconMap[category.icon] || Target;
