@@ -128,6 +128,9 @@ const Dashboard = () => {
           )}
         </div>
 
+        {/* Habit Calendar */}
+        <HabitCalendar categories={categories} />
+
         {/* Achievements */}
         <AchievementsSection />
 
