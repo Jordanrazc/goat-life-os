@@ -15,6 +15,7 @@ import TasksSection from '@/components/TasksSection';
 import VacationToggle from '@/components/VacationToggle';
 import ManageCategoryDialog from '@/components/ManageCategoryDialog';
 import ManageHabitDialog from '@/components/ManageHabitDialog';
+import HabitCalendar from '@/components/HabitCalendar';
 import { LogOut, Target, Calendar, Flame, TrendingUp, Settings, Pencil } from 'lucide-react';
 import { format } from 'date-fns';
 import { Skeleton } from '@/components/ui/skeleton';
